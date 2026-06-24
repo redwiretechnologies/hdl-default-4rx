@@ -688,15 +688,15 @@ ad_cpu_interconnect 0x44A30000  axi_adrv9001_rx1_dma_0
 ad_cpu_interconnect 0x44A40000  axi_adrv9001_rx2_dma_0
 ad_cpu_interconnect 0x44A50000  axi_adrv9001_tx1_dma_0
 ad_cpu_interconnect 0x44A60000  axi_adrv9001_tx2_dma_0
-ad_cpu_interconnect 0x54A00000  axi_adrv9001_1
-ad_cpu_interconnect 0x54A30000  axi_adrv9001_rx1_dma_1
-ad_cpu_interconnect 0x54A40000  axi_adrv9001_rx2_dma_1
-ad_cpu_interconnect 0x54A50000  axi_adrv9001_tx1_dma_1
-ad_cpu_interconnect 0x54A60000  axi_adrv9001_tx2_dma_1
-ad_cpu_interconnect 0x7C000000  default_block_0
-ad_cpu_interconnect 0x7D000000  default_block_1
-ad_cpu_interconnect 0x7E000000  default_block_2
-ad_cpu_interconnect 0x7F000000  default_block_3
+ad_cpu_interconnect 0x44B00000  axi_adrv9001_1
+ad_cpu_interconnect 0x44B30000  axi_adrv9001_rx1_dma_1
+ad_cpu_interconnect 0x44B40000  axi_adrv9001_rx2_dma_1
+ad_cpu_interconnect 0x44B50000  axi_adrv9001_tx1_dma_1
+ad_cpu_interconnect 0x44B60000  axi_adrv9001_tx2_dma_1
+ad_cpu_interconnect 0x7B000000  default_block_0
+ad_cpu_interconnect 0x7C000000  default_block_1
+ad_cpu_interconnect 0x7D000000  default_block_2
+ad_cpu_interconnect 0x7E000000  default_block_3
 
 # memory interconnect
 ad_mem_hpc0_interconnect sys_cpu_clk sys_ps8/S_AXI_HPC0
