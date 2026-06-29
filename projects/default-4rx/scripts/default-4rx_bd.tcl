@@ -216,7 +216,7 @@ ad_connect  sys_500m_clk       axi_adrv9001_0/delay_clk
 
 ad_connect tx_output_enable_0  axi_adrv9001_0/tx_output_enable
 
-ad_connect mssi_sync_0         axi_adrv9001_0/mssi_sync
+ad_connect mssi_sync_0         axi_adrv9001_0/mssi_sync_in
 
 ad_connect rx1_dclk_in_0_n     axi_adrv9001_0/rx1_dclk_in_n_NC
 ad_connect rx1_dclk_in_0_p     axi_adrv9001_0/rx1_dclk_in_p_dclk_in
@@ -495,7 +495,7 @@ ad_connect  sys_500m_clk       axi_adrv9001_1/delay_clk
 
 ad_connect tx_output_enable_1  axi_adrv9001_1/tx_output_enable
 
-ad_connect mssi_sync_1         axi_adrv9001_1/mssi_sync
+ad_connect mssi_sync_1         axi_adrv9001_1/mssi_sync_in
 
 ad_connect rx1_dclk_in_1_n     axi_adrv9001_1/rx1_dclk_in_n_NC
 ad_connect rx1_dclk_in_1_p     axi_adrv9001_1/rx1_dclk_in_p_dclk_in
