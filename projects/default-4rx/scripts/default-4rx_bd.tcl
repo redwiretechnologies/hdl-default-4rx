@@ -134,6 +134,7 @@ ad_ip_instance axi_adrv9001 axi_adrv9001_0
 ad_ip_parameter axi_adrv9001_0 CONFIG.CMOS_LVDS_N 0
 ad_ip_parameter axi_adrv9001_0 CONFIG.USE_RX_CLK_FOR_TX1 1
 ad_ip_parameter axi_adrv9001_0 CONFIG.USE_RX_CLK_FOR_TX2 1
+ad_ip_parameter axi_adrv9001_0 CONFIG.IO_DELAY_GROUP dev_if_delay_group_0
 
 ad_ip_instance proc_sys_reset adc_clk_reset_0
 ad_ip_instance proc_sys_reset adc_clk_reset_1
@@ -413,6 +414,7 @@ ad_ip_instance axi_adrv9001 axi_adrv9001_1
 ad_ip_parameter axi_adrv9001_1 CONFIG.CMOS_LVDS_N 0
 ad_ip_parameter axi_adrv9001_1 CONFIG.USE_RX_CLK_FOR_TX1 1
 ad_ip_parameter axi_adrv9001_1 CONFIG.USE_RX_CLK_FOR_TX2 1
+ad_ip_parameter axi_adrv9001_1 CONFIG.IO_DELAY_GROUP dev_if_delay_group_1
 
 ad_ip_instance proc_sys_reset adc_clk_reset_2
 ad_ip_instance proc_sys_reset adc_clk_reset_3
