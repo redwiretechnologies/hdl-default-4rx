@@ -2,7 +2,7 @@
 
 create_bd_port -dir I pps
 
-#create_bd_port -dir I ref_clk
+create_bd_port -dir I ref_clk
 
 ### Transceiver 0
 
@@ -133,8 +133,10 @@ create_bd_port -dir O tdd_sync_cntr_1
 ad_ip_instance axi_adrv9001 axi_adrv9001_0
 ad_ip_parameter axi_adrv9001_0 CONFIG.CMOS_LVDS_N 0
 ad_ip_parameter axi_adrv9001_0 CONFIG.USE_RX_CLK_FOR_TX1 1
-ad_ip_parameter axi_adrv9001_0 CONFIG.USE_RX_CLK_FOR_TX2 1
+ad_ip_parameter axi_adrv9001_0 CONFIG.USE_RX_CLK_FOR_TX2 2
 ad_ip_parameter axi_adrv9001_0 CONFIG.IO_DELAY_GROUP dev_if_delay_group_0
+ad_ip_parameter axi_adrv9001_0 CONFIG.RX_USE_BUFG 1
+ad_ip_parameter axi_adrv9001_0 CONFIG.TX_USE_BUFG 1
 
 ad_ip_instance proc_sys_reset adc_clk_reset_0
 ad_ip_instance proc_sys_reset adc_clk_reset_1
@@ -144,11 +146,9 @@ ad_ip_instance concat_9002 concat_9002_1
 
 ad_ip_instance  default_block   default_block_0
 ad_ip_parameter default_block_0 CONFIG.CLK_FREQ 100000000
-ad_ip_parameter default_block_0 CONFIG.ENABLE_DUAL_CIC 1
 
 ad_ip_instance  default_block   default_block_1
 ad_ip_parameter default_block_1 CONFIG.CLK_FREQ 100000000
-ad_ip_parameter default_block_1 CONFIG.ENABLE_DUAL_CIC 0
 
 # dma for rx1
 
@@ -213,7 +213,7 @@ ad_connect  sys_500m_clk       axi_adrv9001_0/delay_clk
 #ad_connect  axi_adrv9001_0/dac_2_clk axi_adrv9001_tx2_dma_0/m_axis_aclk
 ####
 
-#ad_connect ref_clk           axi_adrv9001_0/ref_clk
+ad_connect ref_clk           axi_adrv9001_0/ref_clk
 
 ad_connect tx_output_enable_0  axi_adrv9001_0/tx_output_enable
 
@@ -411,10 +411,13 @@ ad_connect sys_cpu_resetn axi_adrv9001_tx2_dma_0/m_src_axi_aresetn
 # adrv9001
 
 ad_ip_instance axi_adrv9001 axi_adrv9001_1
+ad_ip_parameter axi_adrv9001_1 CONFIG.ID 1
 ad_ip_parameter axi_adrv9001_1 CONFIG.CMOS_LVDS_N 0
 ad_ip_parameter axi_adrv9001_1 CONFIG.USE_RX_CLK_FOR_TX1 1
-ad_ip_parameter axi_adrv9001_1 CONFIG.USE_RX_CLK_FOR_TX2 1
+ad_ip_parameter axi_adrv9001_1 CONFIG.USE_RX_CLK_FOR_TX2 2
 ad_ip_parameter axi_adrv9001_1 CONFIG.IO_DELAY_GROUP dev_if_delay_group_1
+ad_ip_parameter axi_adrv9001_1 CONFIG.RX_USE_BUFG 1
+ad_ip_parameter axi_adrv9001_1 CONFIG.TX_USE_BUFG 1
 
 ad_ip_instance proc_sys_reset adc_clk_reset_2
 ad_ip_instance proc_sys_reset adc_clk_reset_3
@@ -424,11 +427,9 @@ ad_ip_instance concat_9002 concat_9002_3
 
 ad_ip_instance  default_block   default_block_2
 ad_ip_parameter default_block_2 CONFIG.CLK_FREQ 100000000
-ad_ip_parameter default_block_2 CONFIG.ENABLE_DUAL_CIC 1
 
 ad_ip_instance  default_block   default_block_3
 ad_ip_parameter default_block_3 CONFIG.CLK_FREQ 100000000
-ad_ip_parameter default_block_3 CONFIG.ENABLE_DUAL_CIC 0
 
 # dma for rx1
 
@@ -493,7 +494,7 @@ ad_connect  sys_500m_clk       axi_adrv9001_1/delay_clk
 #ad_connect  axi_adrv9001_1/dac_2_clk axi_adrv9001_tx2_dma_1/m_axis_aclk
 ####
 
-#ad_connect ref_clk           axi_adrv9001_1/ref_clk
+ad_connect ref_clk           axi_adrv9001_1/ref_clk
 
 ad_connect tx_output_enable_1  axi_adrv9001_1/tx_output_enable
 
